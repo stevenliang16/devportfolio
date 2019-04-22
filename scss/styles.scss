@@ -146,6 +146,7 @@ header {
     left: 0;
     right: 0;
     text-align: center;
+    display: grid;
     z-index: 10;
     animation-name: dropHeader;
     animation-iteration-count: 1;
@@ -154,12 +155,23 @@ header {
 
     ul {
         display: inline-block;
-        background: $background;
+        background: #313131;
         text-align: center;
         padding: 10px;
         margin: 0;
         border-bottom-right-radius: 4px;
         border-bottom-left-radius: 4px;
+    }
+
+    logo {
+        float: left;
+        color: #fff;
+        font-family: cursive;
+        padding: 10px;
+    }
+    
+    right-menu {
+        float: right;
     }
 
     li {
@@ -168,7 +180,7 @@ header {
 
     a {
         display: block;
-        color: $base-color;
+        color: #fff;
         padding: 10px;
 
         &:hover {
@@ -347,31 +359,33 @@ footer {
 
 #lead {
     position: relative;
-    height: 100vh;
+    height: auto;
     min-height: 500px;
     max-height: 1080px;
-    background: url(../images/lead-bg.jpg);
+    background: url(../images/SiyuChen.JPG);
     background-size: cover;
     padding: 15px;
+    padding-top: 100px;
     overflow: hidden;
 }
 
 #lead-content {
-    position: absolute;
+    position: relative;
     z-index: 10;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    top: auto;
+    left: auto;
+    transform: none;
     text-align: center;
 
     h1, h2 {
-        margin: 0;
+        margin-top: 0;
+        margin-bottom: 30px;
     }
 
     h1 {
-        color: #fff;
+        color: rgb(44, 39, 39);
         font-weight: 900;
-        font-size: 5em;
+        font-size: 3em;
         text-transform: uppercase;
         letter-spacing: 0.05em;
         line-height: 0.9em;
@@ -448,6 +462,13 @@ footer {
 #about {
     padding: 75px 15px;
     border-bottom: 1px solid $border;
+    text-align: center;
+
+    img {
+        max-width: 100%;
+        border-radius: 50%;
+        box-shadow: 2px 2px 10px;
+    }
 
     h2 {
         color: $heading;
@@ -456,6 +477,9 @@ footer {
     p {
         color: $text;
         margin: 0;
+        text-align: justify;
+        line-height: 2;
+        text-indent: 2em;
     }
 }
 
@@ -651,14 +675,13 @@ footer {
 }
 
 .project-image {
-    float: left;
+    display: block;
+    width: 100%;
+    height: auto;
+    cursor: pointer;
 }
 
 .project-info {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    margin-left: 300px;
     padding: 15px;
 
     h3 {
@@ -870,41 +893,6 @@ footer {
 
 }
 
-// Medium Devices
-@media only screen and (max-width : 992px) {
-
-    #lead {
-        height: auto;
-        min-height: auto;
-        max-height: auto;
-        padding: 100px 15px;
-    }
-
-    #lead-content {
-        position: relative;
-        transform: none;
-        left: auto;
-        top: auto;
-
-        h1 {
-            font-size: 3em;
-        }
-
-        h2 {
-            font-size: 1.75em;
-        }
-    }
-
-    #about {
-        text-align: center;
-
-        p {
-            text-align: left;
-        }
-    }
-
-}
-
 // Small Devices
 @media only screen and (max-width : 768px) {
 
@@ -958,10 +946,6 @@ footer {
         }
     }
 
-    .project-image {
-        display: none;
-    }
-
     .project-info {
         position: relative;
         margin: 0;
@@ -978,6 +962,15 @@ footer {
         text-align: center;
     }
 
+    #about {
+        img {
+            max-width: 300px;
+        }
+
+        h2 {
+            margin-top: 20px;
+        }
+    }
 }
 
 // Extra Small Devices

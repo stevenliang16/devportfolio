@@ -6,11 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>My Portfolio</title>
-	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-	<link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
     <link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css">
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="css/styles.css" rel="stylesheet">
 </head>
 
@@ -19,63 +20,77 @@
         <i class="fa fa-bars" aria-hidden="true"></i>
     </div>
     <!-- End #mobile-menu-toggle -->
-    <header>
+    <header class="sticky">
         <div id="mobile-menu-close">
             <span>Close</span> <i class="fa fa-times" aria-hidden="true"></i>
         </div>
         <ul id="menu" class="shadow">
-            <li>
-                <a href="#about">About</a>
-            </li>
-            <li>
-                <a href="#experience">Experience</a>
-            </li>
-            <li>
-                <a href="#education">Education</a>
-            </li>
-            <li>
-                <a href="#projects">Projects</a>
-            </li>
-            <li>
-                <a href="#skills">Skills</a>
-            </li>
-            <li>
-                <a href="#contact">Contact</a>
-            </li>
+            <logo>Siyu Chen | Effects Artist</logo>
+            <right-menu>
+                <li>
+                    <a href="#about">About</a>
+                </li>
+                <li>
+                    <a href="#projects">Projects</a>
+                </li>
+                <li>
+                    <a href="#" data-toggle="modal" data-target="#resumeModal">Resume</a>
+                </li>
+                <li>
+                    <a href="#contact">Contact</a>
+                </li>
+            </right-menu>
         </ul>
     </header>
     <!-- End header -->
 
+    <div class="modal fade" id="resumeModal" tabindex="-1" role="dialog" aria-labelledby="resumeModalTitle"
+        aria-hidden="true">
+        <div class="modal-dialog modal-xl" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="resumeModalTitle">Resume</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <iframe src="https://drive.google.com/file/d/1HPD79QubH_5Y7TzKfPCtSZVnUvaau3r8/preview" width="100%"
+                        height="600px"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div id="lead">
         <div id="lead-content">
-            <h1>Ryan Fitzgerald</h1>
-            <h2>Software Engineer</h2>
-            <a href="#" class="btn-rounded-white">Download Resume</a>
+            <h1>Demo Reel</h1>
+            <div style="padding:56.25% 0 0 0;position:relative;">
+                <iframe src="https://player.vimeo.com/video/325053553"
+                    style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0"
+                    allow="autoplay; fullscreen" allowfullscreen></iframe>
+            </div>
         </div>
-        <!-- End #lead-content -->
-
-        <div id="lead-overlay"></div>
-
-        <div id="lead-down">
-            <span>
-                <i class="fa fa-chevron-down" aria-hidden="true"></i>
-            </span>
-        </div>
-        <!-- End #lead-down -->
+        <script src="https://player.vimeo.com/api/player.js"></script>
     </div>
+    <!-- End #lead-content -->
     <!-- End #lead -->
 
     <div id="about">
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
-                    <h2 class="heading">About Me</h2>
+                    <img src="images/me.jpg" />
                 </div>
                 <div class="col-md-8">
+                    <h2 class="heading">About Me</h2>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex. Etiam volutpat laoreet urna. Morbi ut tortor nec nulla commodo malesuada sit amet vel lacus. Fusce eget efficitur libero. Morbi dapibus porta quam laoreet placerat. Donec
-                        eu vehicula neque. Donec viverra lorem nunc, tempus euismod eros sollicitudin ut. Quisque et tincidunt libero. Donec id pharetra justo. Proin euismod lacinia dolor, eu scelerisque justo tempus pharetra. Vivamus nunc justo, finibus
-                        ut nisl sed, euismod rhoncus nulla. Proin sed magna egestas, egestas ante et, congue eros. In consequat, mauris dapibus tincidunt suscipit, ex libero aliquet diam, at maximus risus enim non leo.
+                        I am Siyu Chen, an MFA student at Academy of Art University majoring in Visual Effects and
+                        focusing on Dynamics. My expected graduation date is Sept 2020.
+                    </p>
+                    <p>
+                        I am familiar with Maya and Houdini. I can also do modeling, texturing and lighting. I am
+                        passionate about work and life.
                     </p>
                 </div>
             </div>
@@ -83,101 +98,158 @@
     </div>
     <!-- End #about -->
 
-    <div id="experience" class="background-alt">
-        <h2 class="heading">Experience</h2>
-        <div id="experience-timeline">
-            <div data-date="September 2015 – September 2016">
-                <h3>Employer Name</h3>
-                <h4>Job Title</h4>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex. Etiam volutpat laoreet urna. Morbi ut tortor nec nulla commodo malesuada sit amet vel lacus. Fusce eget efficitur libero. Morbi dapibus porta quam laoreet placerat.
-                </p>
-            </div>
-
-            <div data-date="September 2015 – September 2016">
-                <h3>Employer Name</h3>
-                <h4>Job Title</h4>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex. Etiam volutpat laoreet urna. Morbi ut tortor nec nulla commodo malesuada sit amet vel lacus. Fusce eget efficitur libero. Morbi dapibus porta quam laoreet placerat.
-                </p>
-            </div>
-
-            <div data-date="September 2015 – September 2016">
-                <h3>Employer Name</h3>
-                <h4>Job Title</h4>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex. Etiam volutpat laoreet urna. Morbi ut tortor nec nulla commodo malesuada sit amet vel lacus. Fusce eget efficitur libero. Morbi dapibus porta quam laoreet placerat.
-                </p>
-            </div>
-        </div>
-    </div>
-    <!-- End #experience -->
-
-    <div id="education">
-        <h2 class="heading">Education</h2>
-        <div class="education-block">
-            <h3>University of Ottawa</h3>
-            <span class="education-date">Sept 2016 - Sept 2017</span>
-            <h4>Bachelor of Science in Computer Science</h4>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex. Etiam volutpat laoreet urna. Morbi ut tortor nec nulla commodo malesuada sit amet vel lacus. Fusce eget efficitur libero. Morbi dapibus porta quam laoreet placerat.
-            </p>
-        </div>
-        <!-- End .education-block -->
-
-        <div class="education-block">
-            <h3>University of Ottawa</h3>
-            <span class="education-date">Sept 2016 - Sept 2017</span>
-            <h4>Bachelor of Science in Computer Science</h4>
-            <ul>
-                <li>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                </li>
-                <li>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                </li>
-                <li>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                </li>
-            </ul>
-        </div>
-        <!-- End .education-block -->
-    </div>
-    <!-- End #education -->
-
     <div id="projects" class="background-alt">
         <h2 class="heading">Projects</h2>
         <div class="container">
             <div class="row">
-                <div class="project shadow-large">
-                    <div class="project-image">
-                        <img src="images/project.jpg" />
-                    </div>
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <img class="project-image" src="images/ComingSoon.jpg" data-toggle="modal"
+                        data-target="#project1Modal" />
                     <!-- End .project-image -->
                     <div class="project-info">
-                        <h3>Project Name Here</h3>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex. Etiam volutpat laoreet urna. Morbi ut tortor nec nulla commodo malesuada sit amet vel lacus. Fusce eget efficitur libero. Morbi dapibus porta quam laoreet placerat.
-                        </p>
-                        <a href="#">View Project</a>
+                        <h3>Project 1</h3>
                     </div>
                     <!-- End .project-info -->
-                </div>
-                <!-- End .project -->
+                    <div class="modal fade" id="project1Modal" tabindex="-1" role="dialog"
+                        aria-labelledby="project1ModalTitle" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+                            <div class="modal-content">
+                                <div class="modal-body mb-0 p-0">
+                                    <div class="embed-responsive embed-responsive-16by9 z-depth-1-half">
+                                        <iframe src="https://player.vimeo.com/video/325053553"
+                                            style="position:absolute;top:0;left:0;width:100%;height:100%;"
+                                            frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                                    </div>
 
-                <div class="project shadow-large">
-                    <div class="project-image">
-                        <img src="images/project.jpg" />
+                                </div>
+                            </div>
+                        </div>
                     </div>
+                    <!-- End .modal -->
+                </div>
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <img class="project-image" src="images/ComingSoon.jpg" data-toggle="modal"
+                        data-target="#project2Modal" />
                     <!-- End .project-image -->
                     <div class="project-info">
-                        <h3>Project Name Here</h3>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex. Etiam volutpat laoreet urna. Morbi ut tortor nec nulla commodo malesuada sit amet vel lacus. Fusce eget efficitur libero. Morbi dapibus porta quam laoreet placerat.
-                        </p>
-                        <a href="#">View Project</a>
+                        <h3>Project 2</h3>
                     </div>
                     <!-- End .project-info -->
+                    <div class="modal fade" id="project2Modal" tabindex="-1" role="dialog"
+                        aria-labelledby="project2ModalTitle" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+                            <div class="modal-content">
+                                <div class="modal-body mb-0 p-0">
+                                    <div class="embed-responsive embed-responsive-16by9 z-depth-1-half">
+                                        <iframe src="https://player.vimeo.com/video/325053553"
+                                            style="position:absolute;top:0;left:0;width:100%;height:100%;"
+                                            frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End .modal -->
+                </div>
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <img class="project-image" src="images/ComingSoon.jpg" data-toggle="modal"
+                        data-target="#project3Modal" />
+                    <!-- End .project-image -->
+                    <div class="project-info">
+                        <h3>Project 3</h3>
+                    </div>
+                    <!-- End .project-info -->
+                    <div class="modal fade" id="project3Modal" tabindex="-1" role="dialog"
+                        aria-labelledby="project3ModalTitle" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+                            <div class="modal-content">
+                                <div class="modal-body mb-0 p-0">
+                                    <div class="embed-responsive embed-responsive-16by9 z-depth-1-half">
+                                        <iframe src="https://player.vimeo.com/video/325053553"
+                                            style="position:absolute;top:0;left:0;width:100%;height:100%;"
+                                            frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End .modal -->
+                </div>
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <img class="project-image" src="images/ComingSoon.jpg" data-toggle="modal"
+                        data-target="#project4Modal" />
+                    <!-- End .project-image -->
+                    <div class="project-info">
+                        <h3>Project 4</h3>
+                    </div>
+                    <!-- End .project-info -->
+                    <div class="modal fade" id="project4Modal" tabindex="-1" role="dialog"
+                        aria-labelledby="project4ModalTitle" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+                            <div class="modal-content">
+                                <div class="modal-body mb-0 p-0">
+                                    <div class="embed-responsive embed-responsive-16by9 z-depth-1-half">
+                                        <iframe src="https://player.vimeo.com/video/325053553"
+                                            style="position:absolute;top:0;left:0;width:100%;height:100%;"
+                                            frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End .modal -->
+                </div>
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <img class="project-image" src="images/ComingSoon.jpg" data-toggle="modal"
+                        data-target="#project5Modal" />
+                    <!-- End .project-image -->
+                    <div class="project-info">
+                        <h3>Project 5</h3>
+                    </div>
+                    <!-- End .project-info -->
+                    <div class="modal fade" id="project5Modal" tabindex="-1" role="dialog"
+                        aria-labelledby="project5ModalTitle" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+                            <div class="modal-content">
+                                <div class="modal-body mb-0 p-0">
+                                    <div class="embed-responsive embed-responsive-16by9 z-depth-1-half">
+                                        <iframe src="https://player.vimeo.com/video/325053553"
+                                            style="position:absolute;top:0;left:0;width:100%;height:100%;"
+                                            frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End .modal -->
+                </div>
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <img class="project-image" src="images/ComingSoon.jpg" data-toggle="modal"
+                        data-target="#project6Modal" />
+                    <!-- End .project-image -->
+                    <div class="project-info">
+                        <h3>Project 6</h3>
+                    </div>
+                    <!-- End .project-info -->
+                    <div class="modal fade" id="project6Modal" tabindex="-1" role="dialog"
+                        aria-labelledby="project6ModalTitle" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+                            <div class="modal-content">
+                                <div class="modal-body mb-0 p-0">
+                                    <div class="embed-responsive embed-responsive-16by9 z-depth-1-half">
+                                        <iframe src="https://player.vimeo.com/video/325053553"
+                                            style="position:absolute;top:0;left:0;width:100%;height:100%;"
+                                            frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End .modal -->
                 </div>
                 <!-- End .project -->
             </div>
@@ -188,32 +260,21 @@
     <div id="skills">
         <h2 class="heading">Skills</h2>
         <ul>
-            <li>JavaScript</li>
-            <li>Python</li>
-            <li>Ruby</li>
-            <li>Go</li>
-            <li>Node.js</li>
-            <li>AngularJs</li>
-            <li>React</li>
-            <li>Elixir</li>
-            <li>Java</li>
-            <li>C</li>
-            <li>C#</li>
-            <li>C++</li>
-            <li>Ruby on Rails</li>
-            <li>JavaScript</li>
-            <li>Python</li>
-            <li>Ruby</li>
-            <li>Go</li>
-            <li>Node.js</li>
-            <li>AngularJs</li>
-            <li>React</li>
-            <li>Elixir</li>
-            <li>Java</li>
-            <li>C</li>
-            <li>C#</li>
-            <li>C++</li>
-            <li>Ruby on Rails</li>
+            <li>Maya</li>
+            <li>Houdini</li>
+            <li>Arnold</li>
+            <li>Nuke</li>
+            <li>After Effects</li>
+            <li>Mudbox</li>
+            <li>Photoshop</li>
+            <li>ZBrush</li>
+            <li>Dynamic Simulation</li>
+            <li>3D Modeling</li>
+            <li>Texturing & Lighting</li>
+            <li>Shading</li>
+            <li>MEL</li>
+            <li>Basic VFX Pipeline</li>
+            <li>Compositing</li>
         </ul>
     </div>
     <!-- End #skills -->
@@ -221,7 +282,7 @@
     <div id="contact">
         <h2>Get in Touch</h2>
         <div id="contact-form">
-            <form method="POST" action="https://formspree.io/email@email.com">
+            <form method="POST" action="https://formspree.io/c.gothic7@gmail.com">
                 <input type="hidden" name="_subject" value="Contact request from personal website" />
                 <input type="email" name="_replyto" placeholder="Your email" required>
                 <textarea name="message" placeholder="Your message" required></textarea>
@@ -237,7 +298,7 @@
             <div class="row">
                 <div class="col-sm-5 copyright">
                     <p>
-                        Copyright &copy; 2017 YOUR NAME
+                        Copyright &copy; 2019 Siyu Chen
                     </p>
                 </div>
                 <div class="col-sm-2 top">
@@ -248,22 +309,8 @@
                 <div class="col-sm-5 social">
                     <ul>
                         <li>
-                            <a href="https://github.com/" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
-                        </li>
-                        <li>
-                            <a href="https://stackoverflow.com/" target="_blank"><i class="fa fa-stack-overflow" aria-hidden="true"></i></a>
-                        </li>
-                        <li>
-                            <a href="https://linkedin.com/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-                        </li>
-                        <li>
-                            <a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                        </li>
-                        <li>
-                            <a href="https://twitter.com/" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                        </li>
-                        <li>
-                            <a href="https://plus.google.com/" target="_blank"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+                            <a href="https://www.linkedin.com/in/siyu-chen-829810137/" target="_blank"><i
+                                    class="fa fa-linkedin" aria-hidden="true"></i></a>
                         </li>
                     </ul>
                 </div>
@@ -274,6 +321,9 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="js/scripts.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
