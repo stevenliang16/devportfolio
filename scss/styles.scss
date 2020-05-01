@@ -762,9 +762,23 @@ footer {
     }
 }
 
+#contact-info {
+    margin: 15px auto;
+    max-width: 500px;
+    color: #fff;
+    font-size: large;
+    text-align: left;
+}
+
 #contact-form {
     max-width: 500px;
     margin: 0 auto;
+
+    h3 {
+        font-size: larger;
+        text-align: left;
+        color: #fff;
+    }
 
     input, textarea {
         display: block;
